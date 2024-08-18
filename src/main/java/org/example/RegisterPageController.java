@@ -15,16 +15,14 @@ public class RegisterPageController {
         this.driver = driver;
     }
 
-    public RegisterPageController() {
-
-    }
-
     public void clickOnPersonalCabinetButton() {
         driver.findElement(buttonPersonalCabinet).click();
     }
+
     public void clickOnRegisterButton() {
         driver.findElement(buttonPageReg).click();
     }
+
     public void clickOnFinalRegisterButton() {
         driver.findElement(buttonRegister).click();
     }

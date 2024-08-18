@@ -5,6 +5,7 @@ import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
+
 public class UserControllerStep {
 
     private final static String apiCreateUser = "/api/auth/register";
