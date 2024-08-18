@@ -12,7 +12,7 @@ import java.time.Duration;
 import static org.example.pageObject.MainPageLocators.*;
 import static org.junit.Assert.assertEquals;
 
-public class WayToConstructorTest {
+public class GoToConstructorTest {
     private WebDriver driver;
 
     @Before

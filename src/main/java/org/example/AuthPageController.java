@@ -12,19 +12,21 @@ public class AuthPageController {
     public AuthPageController(WebDriver driver) {
         this.driver = driver;
     }
+
     public void setEmail(String email) {
         driver.findElement(fieldEmailAuth).sendKeys(email);
     }
+
     public void setPassword(String password) {
         driver.findElement(fieldPasswordAuth).sendKeys(password);
     }
+
     public void clickAuthButton() {
         driver.findElement(buttonSignIn).click();
     }
 
-    @Step
-    @DisplayName("Вход в личный кабинет пользователя")
-    public void singLoginFromMainPage(String email, String password) {
+    @Step("Вход в личный кабинет пользователя")
+    public void signLoginFromMainPage(String email, String password) {
         setEmail(email);
         setPassword(password);
         clickAuthButton();

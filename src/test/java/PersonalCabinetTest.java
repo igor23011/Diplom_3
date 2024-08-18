@@ -37,7 +37,7 @@ public class PersonalCabinetTest {
 
         AuthPageController authPage = new AuthPageController(driver);
         driver.findElement(buttonSignInAccount).click();
-        authPage.singLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
+        authPage.signLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
         new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(buttonMakeOrder));
 
     }

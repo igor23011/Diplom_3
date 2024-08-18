@@ -42,7 +42,7 @@ public class LoginTest {
     public void checkSuccessFromSignInPersonalCabinetTest() {
         AuthPageController authPage = new AuthPageController(driver);
         driver.findElement(buttonPersonalCabinet).click();
-        authPage.singLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
+        authPage.signLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
         new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfElementLocated(buttonMakeOrder));
         String actualResult = driver.findElement(buttonMakeOrder).getText();
         String expectedResult = "Оформить заказ";
@@ -54,7 +54,7 @@ public class LoginTest {
     public void checkSuccessLoginFromPersonalCabinetTest() {
         AuthPageController authPage = new AuthPageController(driver);
         driver.findElement(buttonSignInAccount).click();
-        authPage.singLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
+        authPage.signLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
         new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfElementLocated(buttonMakeOrder));
         String actualResult = driver.findElement(buttonMakeOrder).getText();
         String expectedResult = "Оформить заказ";
@@ -68,7 +68,7 @@ public class LoginTest {
         driver.findElement(buttonPersonalCabinet).click();
         driver.findElement(buttonPageReg).click();
         driver.findElement(buttonEnterPageReg).click();
-        authPage.singLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
+        authPage.signLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
         new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfElementLocated(buttonMakeOrder));
         String actualResult = driver.findElement(buttonMakeOrder).getText();
         String expectedResult = "Оформить заказ";
@@ -82,7 +82,7 @@ public class LoginTest {
         driver.findElement(buttonPersonalCabinet).click();
         driver.findElement(forgotPasswordLink).click();
         driver.findElement(buttonEnterPageReg).click();
-        authPage.singLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
+        authPage.signLoginFromMainPage(createUser.getEmail(), createUser.getPassword());
         new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.visibilityOfElementLocated(buttonMakeOrder));
         String actualResult = driver.findElement(buttonMakeOrder).getText();
         String expectedResult = "Оформить заказ";

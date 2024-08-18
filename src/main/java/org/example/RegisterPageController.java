@@ -1,7 +1,6 @@
 package org.example;
 
 import io.qameta.allure.Step;
-import io.qameta.allure.junit4.DisplayName;
 import org.openqa.selenium.WebDriver;
 
 import static org.example.pageObject.MainPageLocators.buttonPersonalCabinet;
@@ -39,8 +38,7 @@ public class RegisterPageController {
         driver.findElement(fieldPasswordReg).sendKeys(password);
     }
 
-    @Step
-    @DisplayName("Регистрация пользователя")
+    @Step("Регистрация пользователя на UI")
     public void register(String name, String email, String password) {
         clickOnPersonalCabinetButton();
         clickOnRegisterButton();
